@@ -9,6 +9,8 @@
  * Dos palabras exactamente iguales no son anagrama.
  */
 
+main()
+
 function main() {
     console.log(isAnagram("night", "thing"));
     console.log(isAnagram("night", "love"));
@@ -26,3 +28,5 @@ function isAnagram(firstWord, secondWord) {
     return (firstWordArray.length === secondWordArray.length) &&
     (firstWordArray.every((value, index) => value === secondWordArray[index]));
 }
+
+module.exports = isAnagram
