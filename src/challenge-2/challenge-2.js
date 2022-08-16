@@ -8,6 +8,8 @@
  * 0, 1, 1, 2, 3, 5, 8, 13...
  */
 
+main()
+
 function main() {
     fibonacciSeries = fibonacci(50)
     fibonacciSeries.forEach(element => {
@@ -30,3 +32,5 @@ function fibonacci(fibonacciNumbers) {
 
     return fibonacciSeries
 }
+
+module.exports = fibonacci
