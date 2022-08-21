@@ -9,8 +9,24 @@
  * - Imprime el cálculo del área de un polígono de cada tipo.
  */
 
-function calculatePolygonArea() {
-    return "a"
+const Rectangle = require("./rectangle");
+const Square = require("./square");
+const Triangle = require("./triangle");
+
+main();
+
+function main() {
+    const rectangle = new Rectangle(4, 6);
+    const square = new Square(2, 2);
+    const triangle = new Triangle(5, 10);
+
+    console.log(calculatePolygonArea(rectangle));
+    console.log(calculatePolygonArea(square));
+    console.log(calculatePolygonArea(triangle));
 }
 
-module.exports = calculatePolygonArea
+function calculatePolygonArea(polygon) {
+    return `${polygon.type} area is ${polygon.calculateArea()}`;
+}
+
+module.exports = calculatePolygonArea;
